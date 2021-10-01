@@ -13,6 +13,10 @@ def clustered_all_points(clustering, dataset):
             return False
     return True
 
+def test_point_avg():
+    a = [0,0]
+    b = [2,2]
+    assert kmeans.point_avg([a, b]) == [1,1]
 
 @pytest.mark.parametrize('datasetPath', [
     ("tests/test_files/dataset_1.csv"),
